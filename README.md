@@ -306,6 +306,10 @@ All the image tags, configurations, environment variables and application option
 
 ### Latest Changes
 
+### 0.4.0
+
+* Added python 3.8 slim-buster and removed alpine and 2.7
+
 ### 0.3.0
 
 * Refactor tests to use env vars and add image tags for each build date, like `nsollazzo/meinheld-gunicorn:python3.7-slim-buster-2019-10-15`. PR [#8](https://github.com/nsollazzo/meinheld-gunicorn-docker/pull/8).

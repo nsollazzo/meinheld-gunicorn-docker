@@ -5,9 +5,15 @@ import sys
 environments = [
     {
         "NAME": "latest",
-        "BUILD_PATH": "python3.7-slim-buster",
-        "TEST_STR1": "Hello World from a default Python 3.7 app in a Docker container, with Meinheld and Gunicorn (default)",
-        "TEST_STR2": "Test app. From Meinheld with Gunicorn. Using Python 3.7",
+        "BUILD_PATH": "python8-slim-buster",
+        "TEST_STR1": "Hello World from a default Python 3.8 app in a Docker container, with Meinheld and Gunicorn (default)",
+        "TEST_STR2": "Test app. From Meinheld with Gunicorn. Using Python 3.8",
+    },
+    {
+        "NAME": "python3.8-slim-buster",
+        "BUILD_PATH": "python3.8-slim-buster",
+        "TEST_STR1": "Hello World from a default Python 3.8 app in a Docker container, with Meinheld and Gunicorn (default)",
+        "TEST_STR2": "Test app. From Meinheld with Gunicorn. Using Python 3.8",
     },
     {
         "NAME": "python3.7-slim-buster",
