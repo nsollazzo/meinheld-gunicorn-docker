@@ -1,4 +1,4 @@
-FROM python:3.7-slim-buster
+FROM python:3.8.0-slim-buster
 
 LABEL maintainer="Nicholas Sollazzo <nicholas@sollazzo.one>"
 
