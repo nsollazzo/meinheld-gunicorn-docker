@@ -1,22 +1,19 @@
-[![Build Status](https://travis-ci.org/tiangolo/meinheld-gunicorn-docker.svg?branch=master)](https://travis-ci.org/tiangolo/meinheld-gunicorn-docker)
+[![Build Status](https://travis-ci.org/nsollazzo/meinheld-gunicorn-docker.svg?branch=master)](https://travis-ci.org/nsollazzo/meinheld-gunicorn-docker)
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`python3.7`, `latest` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.7/Dockerfile)
-* [`python3.6` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.6/Dockerfile)
-* [`python2.7` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python2.7/Dockerfile)
-* [`python3.6-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.6-alpine3.8/Dockerfile)
-* [`python3.7-alpine3.8` _(Dockerfile)_](https://github.com/tiangolo/meinheld-gunicorn-docker/blob/master/python3.7-alpine3.8/Dockerfile)
+* [`python3.7-slim-buster`, `latest` _(Dockerfile)_](https://github.com/nsollazzo/meinheld-gunicorn-docker/blob/master/python3.7-slim-buster/Dockerfile)
+* [`python3.6` _(Dockerfile)_](https://github.com/nsollazzo/meinheld-gunicorn-docker/blob/master/python3.6/Dockerfile)
 
-**Note**: Note: There are [tags for each build date](https://hub.docker.com/r/tiangolo/meinheld-gunicorn/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`.
+**Note**: Note: There are [tags for each build date](https://hub.docker.com/r/nsollazzo/meinheld-gunicorn/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `nsollazzo/meinheld-gunicorn:python3.7-slim-buster-2019-10-15`.
 
 # meinheld-gunicorn
 
-[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
+[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning.
 
-**GitHub repo**: [https://github.com/tiangolo/meinheld-gunicorn-docker](https://github.com/tiangolo/meinheld-gunicorn-docker)
+**GitHub repo**: [https://github.com/nsollazzo/meinheld-gunicorn-docker](https://github.com/nsollazzo/meinheld-gunicorn-docker)
 
-**Docker Hub image**: [https://hub.docker.com/r/tiangolo/meinheld-gunicorn/](https://hub.docker.com/r/tiangolo/meinheld-gunicorn/)
+**Docker Hub image**: [https://hub.docker.com/r/nsollazzo/meinheld-gunicorn/](https://hub.docker.com/r/nsollazzo/meinheld-gunicorn/)
 
 ## Description
 
@@ -30,19 +27,11 @@ This image has an "auto-tuning" mechanism included, so that you can just add you
 
 ### * Note on performance and features
 
-If you are starting a new project, you might benefit from a newer and faster framework like [**FastAPI**](https://github.com/tiangolo/fastapi) (based on ASGI instead of WSGI), and a Docker image like [**tiangolo/uvicorn-gunicorn-fastapi**](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker).
+If you are starting a new project, you might benefit from a newer and faster framework like [**FastAPI**](https://github.com/nsollazzo/fastapi) (based on ASGI instead of WSGI), and a Docker image like [**nsollazzo/uvicorn-gunicorn-fastapi**](https://github.com/nsollazzo/uvicorn-gunicorn-fastapi-docker).
 
 It would give you about 200% the performance achievable with an older WSGI framework (like Flask or Django), even when using this image.
 
 Also, if you want to use new technologies like WebSockets it would be easier with a newer framework based on ASGI, like **FastAPI**. As the standard ASGI was designed to be able to handle asynchronous code like the one needed for WebSockets.
-
-## Python 2.7
-
-Do you need support for Python 2.7?
-
-Let me know in an issue and I'll add it.
-
-But only after knowing that someone actually needs it.
 
 ## Technical Details
 
@@ -56,16 +45,16 @@ You can use **Gunicorn** to manage Meinheld and run multiple processes of it.
 
 ## Alternatives
 
-This image was created to be an alternative to [**tiangolo/uwsgi-nginx**](https://github.com/tiangolo/uwsgi-nginx-docker), providing about 400% the performance of that image.
+This image was created to be an alternative to [**nsollazzo/uwsgi-nginx**](https://github.com/nsollazzo/uwsgi-nginx-docker), providing about 400% the performance of that image.
 
-And to be the base of [**tiangolo/meinheld-gunicorn-flask**](https://github.com/tiangolo/meinheld-gunicorn-flask-docker).
+And to be the base of [**nsollazzo/meinheld-gunicorn-flask**](https://github.com/nsollazzo/meinheld-gunicorn-flask-docker).
 
 ## How to use
 
 * You don't need to clone the GitHub repo. You can use this image as a base image for other images, using this in your `Dockerfile`:
 
 ```Dockerfile
-FROM tiangolo/meinheld-gunicorn:python3.7
+FROM nsollazzo/meinheld-gunicorn:python3.7-slim-buster
 
 COPY ./app /app
 ```
@@ -319,13 +308,13 @@ All the image tags, configurations, environment variables and application option
 
 ### 0.3.0
 
-* Refactor tests to use env vars and add image tags for each build date, like `tiangolo/meinheld-gunicorn:python3.7-2019-10-15`. PR [#8](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/8).
+* Refactor tests to use env vars and add image tags for each build date, like `nsollazzo/meinheld-gunicorn:python3.7-slim-buster-2019-10-15`. PR [#8](https://github.com/nsollazzo/meinheld-gunicorn-docker/pull/8).
 
 ### 0.2.0
 
-* Add support for Python 2.7 (you should use Python 3.7 or Python 3.6). PR [#6](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/6).
+* Add support for Python 2.7 (you should use Python 3.7 or Python 3.6). PR [#6](https://github.com/nsollazzo/meinheld-gunicorn-docker/pull/6).
 
-* Upgrade Travis. PR [#5](https://github.com/tiangolo/meinheld-gunicorn-docker/pull/5).
+* Upgrade Travis. PR [#5](https://github.com/nsollazzo/meinheld-gunicorn-docker/pull/5).
 
 ### 0.1.0
 

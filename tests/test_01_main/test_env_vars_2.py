@@ -34,7 +34,7 @@ def verify_container(container):
 
 def test_env_vars_2():
     name = os.getenv("NAME")
-    image = f"tiangolo/meinheld-gunicorn:{name}"
+    image = f"nsollazzo/meinheld-gunicorn:{name}"
     sleep_time = int(os.getenv("SLEEP_TIME", 1))
     remove_previous_container(client)
     container = client.containers.run(

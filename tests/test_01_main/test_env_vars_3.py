@@ -27,7 +27,7 @@ def verify_container(container, response_text):
 
 def test_env_bind():
     name = os.getenv("NAME")
-    image = f"tiangolo/meinheld-gunicorn:{name}"
+    image = f"nsollazzo/meinheld-gunicorn:{name}"
     response_text = os.getenv("TEST_STR1")
     sleep_time = int(os.getenv("SLEEP_TIME", 1))
     remove_previous_container(client)
