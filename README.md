@@ -1,15 +1,15 @@
 [![Build Status](https://travis-ci.org/nsollazzo/meinheld-gunicorn-docker.svg?branch=master)](https://travis-ci.org/nsollazzo/meinheld-gunicorn-docker)
 
 ## Supported tags and respective `Dockerfile` links
-
+* [`python3.8-slim-buster`, `latest` _(Dockerfile)_](https://github.com/nsollazzo/meinheld-gunicorn-docker/blob/master/python3.8-slim-buster/Dockerfile)
 * [`python3.7-slim-buster`, `latest` _(Dockerfile)_](https://github.com/nsollazzo/meinheld-gunicorn-docker/blob/master/python3.7-slim-buster/Dockerfile)
-* [`python3.6` _(Dockerfile)_](https://github.com/nsollazzo/meinheld-gunicorn-docker/blob/master/python3.6/Dockerfile)
+* [`python3.6-slim-buster` _(Dockerfile)_](https://github.com/nsollazzo/meinheld-gunicorn-docker/blob/master/python3.6-slim-buster/Dockerfile)
 
 **Note**: Note: There are [tags for each build date](https://hub.docker.com/r/nsollazzo/meinheld-gunicorn/tags). If you need to "pin" the Docker image version you use, you can select one of those tags. E.g. `nsollazzo/meinheld-gunicorn:python3.7-slim-buster-2019-10-15`.
 
 # meinheld-gunicorn
 
-[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.7** and **3.6** with performance auto-tuning.
+[**Docker**](https://www.docker.com/) image with [**Meinheld**](http://meinheld.org/) managed by [**Gunicorn**](https://gunicorn.org/) for high-performance web applications in **[Python](https://www.python.org/) 3.8**, **3.7** and **3.6** with performance auto-tuning. Optionally with Alpine Linux.
 
 **GitHub repo**: [https://github.com/nsollazzo/meinheld-gunicorn-docker](https://github.com/nsollazzo/meinheld-gunicorn-docker)
 
@@ -54,7 +54,7 @@ And to be the base of [**nsollazzo/meinheld-gunicorn-flask**](https://github.com
 * You don't need to clone the GitHub repo. You can use this image as a base image for other images, using this in your `Dockerfile`:
 
 ```Dockerfile
-FROM nsollazzo/meinheld-gunicorn:python3.7-slim-buster
+FROM nsollazzo/meinheld-gunicorn:python3.8-slim-buster
 
 COPY ./app /app
 ```
