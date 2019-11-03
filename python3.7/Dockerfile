@@ -1,6 +1,6 @@
-FROM python:3.7
+FROM python:3.7-slim-buster
 
-LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
+LABEL maintainer="Nicholas Sollazzo <nicholas@sollazzo.one>"
 
 RUN pip install meinheld gunicorn
 
